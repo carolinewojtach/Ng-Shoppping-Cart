@@ -1,0 +1,38 @@
+{
+  "products": [
+    {
+      "name": "helmet",
+      "id": 1
+    },
+    {
+      "name": "sword",
+      "id": 2
+    },
+    {
+      "name": "shortsword",
+      "id": 3
+    },
+    {
+      "name": "pauldron",
+      "id": 4
+    },
+    {
+      "name": "knife",
+      "id": 5
+    },
+    {
+      "name": "breastplate",
+      "id": 6
+    }
+  ],
+  "cart": [
+    {
+      "id": 3,
+      "name": "shortsword"
+    },
+    {
+      "id": 6,
+      "name": "breastplate"
+    }
+  ]
+}

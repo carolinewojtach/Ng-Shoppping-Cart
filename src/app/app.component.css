@@ -1,24 +1,36 @@
+.topbar {
+  background-color: #727272;
+}
+
 h2 {
   display: flex;
   justify-content: center;
+  color: white;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
+
 nav {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 nav a {
+  color: white;
   margin-left: 40px;
   padding: 10px 30px;
   text-decoration: none;
   border-radius: 5px;
-  border: #818181 solid 1px;
+  border: white solid 1px;
 }
 
 nav a:visited,
 a:link {
-  color: #505050;
+  color: white;
 }
 
 nav a:hover {
+  background-color: #858585
 }

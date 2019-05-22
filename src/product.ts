@@ -4,3 +4,7 @@ export interface Product {
   amount: number;
   // photoSrc: string;
 }
+
+export interface ProductResult {
+  value: Product[];
+}

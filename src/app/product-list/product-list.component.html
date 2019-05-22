@@ -1,3 +1,17 @@
-<p>
-  product-list works!
-</p>
+<!-- <ul>
+  <app-product *ngFor="let product of products2 | async" [product]="product" [name]="product.name" [id]="product.id">
+  </app-product>
+
+
+  <button (click)="addProductToCart(product.id, product.name)">Add to cart</button>
+  </li>
+</ul> -->
+
+<ul>
+  <li *ngFor="let product of products | async">
+    <a routerLink="/products/{{product.id}}">
+      {{ product.name }}
+    </a>
+    <button (click)="addProductToCart(product.id, product.name)">Add to cart</button>
+  </li>
+</ul>
