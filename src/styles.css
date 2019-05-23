@@ -12,3 +12,16 @@ body {
   text-align: center;
   justify-content: center;
 }
+
+.btn {
+  padding: 10px;
+  color: white;
+  background-color:#367394;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #558fad;
+}

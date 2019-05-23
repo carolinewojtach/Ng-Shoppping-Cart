@@ -12,7 +12,7 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent implements OnInit {
   productsInCart: Observable<ProductResult>;
-  selectedProduct: Product;
+  // selectedProduct: Product;
 
   constructor(private productService: ProductService, private cartService: CartService) { }
 
@@ -24,11 +24,11 @@ export class CartComponent implements OnInit {
     this.productsInCart = this.cartService.getCart();
   }
 
-  getProductById(id: number) {
-    this.productService
-      .getProductById(id)
-      .then(res => (this.selectedProduct = res));
-  }
+  // getProductById(id: number) {
+  //   this.productService
+  //     .getProductById(id)
+  //     .then(res => (this.selectedProduct = res));
+  // }
 
   deleteProductFromCart(id: number) {
     this.cartService.deleteProductFromCart(id).subscribe(

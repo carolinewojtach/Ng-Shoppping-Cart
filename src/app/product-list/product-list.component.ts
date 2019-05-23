@@ -12,7 +12,7 @@ import { CartService } from '../services/cart.service';
 })
 export class ProductListComponent implements OnInit {
   products: Observable<ProductResult>;
-  // selectedProduct: Product;
+  selectedProduct: Product;
 
   constructor(private productService: ProductService, private cartService: CartService) { }
 
@@ -30,10 +30,10 @@ export class ProductListComponent implements OnInit {
   //     .then(res => (this.selectedProduct = res));
   // }
 
-  addProductToCart(productId: number, productName: string) {
+  addProductToCart(product) {
     this.cartService
       .addProductToCart({
-        id: productId, name: productName
+        id: product.id, name: product.name, amount: 1, price: product.price
       } as Product)
       .subscribe(() => this.getProducts());
   }

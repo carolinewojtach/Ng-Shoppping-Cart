@@ -1,7 +1,13 @@
-<div *ngIf="product">
-  <p>
+<div *ngIf="product; else elseBlock" class="product">
+  <h3>
     {{product.name}}
+  </h3>
+  <p>
+    {{product.description}}
   </p>
-  <button (click)="addProductToCart(product.id, product.name)">Add to cart</button>
-
+  <button class="btn" (click)="addProductToCart(product)">Add to cart</button>
 </div>
+
+<ng-template #elseBlock class="items-center">
+  <p>Sorry, we don't have such product.</p>
+</ng-template>

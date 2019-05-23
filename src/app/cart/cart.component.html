@@ -1,9 +1,14 @@
+<h4>Your cart</h4>
 <ul>
-  <li *ngFor="let product of productsInCart | async">
-    <a href="#" (click)="getProductById(product.id)">
-      {{ product.name }}
+  <li *ngFor="let product of productsInCart | async" class="product-on-list">
+    <a routerLink="/cart/{{product.id}}">
+      <h4> {{ product.name }}</h4>
+
+      Price: {{product.price}}
+      Amount: {{product.amount}}
     </a>
-    <button (click)="deleteProductFromCart(product.id)">Delete from cart</button>
+
+    <button class="btn" (click)="deleteProductFromCart(product.id)">Delete from cart</button>
 
   </li>
 </ul>

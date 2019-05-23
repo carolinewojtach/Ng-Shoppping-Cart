@@ -1,17 +1,15 @@
-<!-- <ul>
-  <app-product *ngFor="let product of products2 | async" [product]="product" [name]="product.name" [id]="product.id">
-  </app-product>
+<ul class="list">
+  <li *ngFor="let product of products | async" class="product-on-list">
 
-
-  <button (click)="addProductToCart(product.id, product.name)">Add to cart</button>
-  </li>
-</ul> -->
-
-<ul>
-  <li *ngFor="let product of products | async">
     <a routerLink="/products/{{product.id}}">
-      {{ product.name }}
+      <h4> {{ product.name }}</h4>
+
+      <!-- iCon by oNlineWebFonts.Com -->
+      <img src="../../assets/images/sword.png" />
+      <p> Price: {{product.price}}</p>
+      <p> Amount: {{product.amount}}</p>
+
     </a>
-    <button (click)="addProductToCart(product.id, product.name)">Add to cart</button>
+    <button class="btn" (click)="addProductToCart(product)">Add to cart</button>
   </li>
 </ul>

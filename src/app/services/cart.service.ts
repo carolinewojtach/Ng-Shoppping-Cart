@@ -19,10 +19,10 @@ export class CartService {
     // .pipe(map(response => response.value));
   }
 
-  public getProductInCart(id: number) {
-
+  public getProductInCart(id: number): Promise<Product> {
+    return this.http.get<Product>(`${this.url}/${id}`).
+      toPromise();
   }
-
 
   public addProductToCart(product: Product): Observable<Product> {
     return this.http.post<Product>(`${this.url}`, product);
