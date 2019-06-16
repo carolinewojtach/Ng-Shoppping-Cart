@@ -4,77 +4,50 @@
       "name": "Mace",
       "id": 1,
       "description": "A blunt crushing weapon designed to smash armor, a mace consists of a heavy head of stone or metal set upon a wooden or metal shaft. The head is often flanged or knobbed to better penetrate armor.",
-      "price": 100,
-      "amount": 35
+      "price": 100
     },
     {
       "name": "Hand Axe",
       "id": 2,
       "description": "A warrior’s version of a hatchet, smaller than a battle-axe and balanced to be thrown. These short-hafted axes are used by the ironmen to dance the finger dance.",
-      "price": 120,
-      "amount": 25
+      "price": 120
     },
     {
       "name": "Shortsword",
       "id": 3,
       "description": "Shorter than a longsword but longer and heavier than a dagger, the shortsword is a one-handed blade generally meant for thrusting.",
-      "price": 170,
-      "amount": 22
+      "price": 170
     },
     {
       "name": "Greatsword",
       "id": 4,
       "description": "The greatsword requires two hands to use. It is the largest type of sword.",
-      "price": 250,
-      "amount": 16
+      "price": 250
     },
     {
       "name": "Bow",
       "id": 5,
       "description": "Bows in the Seven Kingdoms are made from wood, though bows from more exotic lands may be made from laminated horn or bone.[8] Bows are difficult to use while mounted and cannot normally be used with any accuracy if the mount is moving.",
-      "price": 160,
-      "amount": 35
+      "price": 160
     },
     {
       "name": "Crossbow",
       "id": 6,
       "description": "Crossbows are shorter bows that shoot bolts or quarrels. There is a stock attached to the bow with a mechanical assist to draw the bowstring. Due to its shorter draw, the crossbow requires a higher draw weight to give the same amount of energy as a conventional bow. The drawing mechanism can be a stirrup with a winch or a crank. The Myrish produce ungainly crossbows capable of firing three quarrels at a time.",
-      "price": 190,
-      "amount": 15
+      "price": 190
     },
     {
       "name": "Halberd",
       "id": 7,
       "description": "The halberd has a heavy, cleaver-like blade at the top of a long shaft. It usually has a spike at the top of the shaft and a thorn or a hook opposite to the blade.",
-      "price": 150,
-      "amount": 25
+      "price": 150
     },
     {
       "name": "Spear",
       "id": 8,
       "description": "A simple weapon used for hunting and combat, comprising a wooden shaft up to 10 feet long tipped with a relatively small head of iron or steel. It can be used for individual combat.",
-      "price": 100,
-      "amount": 32
+      "price": 100
     }
   ],
-  "cart": [
-    {
-      "id": 2,
-      "name": "Hand Axe",
-      "amount": 1,
-      "price": 120
-    },
-    {
-      "id": 1,
-      "name": "Mace",
-      "amount": 1,
-      "price": 100
-    },
-    {
-      "id": 4,
-      "name": "Greatsword",
-      "amount": 1,
-      "price": 250
-    }
-  ]
+  "cart": []
 }

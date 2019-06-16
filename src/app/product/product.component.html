@@ -1,11 +1,19 @@
 <div *ngIf="product; else elseBlock" class="product">
-  <h3>
-    {{product.name}}
-  </h3>
-  <p>
-    {{product.description}}
-  </p>
-  <button class="btn" (click)="addProductToCart(product)">Add to cart</button>
+  <div>
+    <h3>
+      {{product.name}}
+    </h3>
+    <p>
+      {{product.description}}
+    </p>
+    <p>
+      Price: {{product.price}}
+    </p> <button class="btn" (click)="addProductToCart(product)">Add to cart</button>
+  </div>
+  <div>
+    <!-- iCon by oNlineWebFonts.Com -->
+    <img src="../../assets/images/sword.png" />
+  </div>
 </div>
 
 <ng-template #elseBlock class="items-center">

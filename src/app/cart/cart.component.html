@@ -1,4 +1,6 @@
-<h4>Your cart</h4>
+<div class="items-center">
+  <h4>Your cart</h4>
+</div>
 <ul>
   <li *ngFor="let product of productsInCart | async" class="product-on-list">
     <a routerLink="/cart/{{product.id}}">

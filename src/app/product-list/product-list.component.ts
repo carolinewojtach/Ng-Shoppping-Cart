@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Product, ProductResult } from 'src/product';
+import { Product, ProductResult, ProductInCart } from 'src/product';
 import { ProductService } from '../services/product.service';
 import { CartService } from '../services/cart.service';
 
@@ -13,6 +13,8 @@ import { CartService } from '../services/cart.service';
 export class ProductListComponent implements OnInit {
   products: Observable<ProductResult>;
   selectedProduct: Product;
+  productInCart: ProductInCart;
+  amount: number;
 
   constructor(private productService: ProductService, private cartService: CartService) { }
 
@@ -24,17 +26,16 @@ export class ProductListComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  // getProductById(id: number) {
-  //   this.productService
-  //     .getProductById(id)
-  //     .then(res => (this.selectedProduct = res));
-  // }
-
   addProductToCart(product) {
+    if (this.productInCart === undefined) {
+      this.productInCart = { id: product.id, name: product.name, amount: 1, price: product.price } as ProductInCart;
+    }
+    console.log(this.productInCart);
+
     this.cartService
       .addProductToCart({
-        id: product.id, name: product.name, amount: 1, price: product.price
-      } as Product)
+        id: this.productInCart.id, name: this.productInCart.name, amount: this.productInCart.amount, price: this.productInCart.price
+      } as ProductInCart)
       .subscribe(() => this.getProducts());
   }
 }

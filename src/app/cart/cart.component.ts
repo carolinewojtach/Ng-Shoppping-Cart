@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { Product, ProductResult } from 'src/product';
 import { ProductService } from '../services/product.service';
@@ -12,9 +13,9 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent implements OnInit {
   productsInCart: Observable<ProductResult>;
-  // selectedProduct: Product;
+  cost: number;
 
-  constructor(private productService: ProductService, private cartService: CartService) { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
     this.getCart();
@@ -24,16 +25,9 @@ export class CartComponent implements OnInit {
     this.productsInCart = this.cartService.getCart();
   }
 
-  // getProductById(id: number) {
-  //   this.productService
-  //     .getProductById(id)
-  //     .then(res => (this.selectedProduct = res));
-  // }
-
   deleteProductFromCart(id: number) {
     this.cartService.deleteProductFromCart(id).subscribe(
       () => this.getCart()
-      // (error: HttpErrorResponse) => console.log(error)
     );
   }
 

@@ -16,7 +16,6 @@ export class ProductService {
   public getProducts(): Observable<ProductResult> {
     return this.http
       .get<ProductResult>(`${this.url}`);
-    // .pipe(map(response => response.value));
   }
 
   public getProductById(id: number): Promise<Product> {

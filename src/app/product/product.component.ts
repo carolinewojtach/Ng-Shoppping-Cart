@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
-import { Product } from 'src/product';
+import { Product, ProductInCart } from 'src/product';
 import { CartService } from '../services/cart.service';
 
 @Component({
@@ -24,11 +24,11 @@ export class ProductComponent implements OnInit {
       .then(res => this.product = res);
   }
 
-  addProductToCart(productId: number, productName: string) {
+  addProductToCart(product) {
     this.cartService
       .addProductToCart({
-        id: productId, name: productName
-      } as Product)
+        id: product.id, name: product.name, amount: product.amount, price: product.price
+      } as ProductInCart)
       .subscribe(() => this.getProductById());
   }
 }

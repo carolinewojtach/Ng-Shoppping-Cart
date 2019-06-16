@@ -2,12 +2,11 @@
   <li *ngFor="let product of products | async" class="product-on-list">
 
     <a routerLink="/products/{{product.id}}">
-      <h4> {{ product.name }}</h4>
+      <h4> {{ product.name | slice : 0  : 20 }}</h4>
 
       <!-- iCon by oNlineWebFonts.Com -->
       <img src="../../assets/images/sword.png" />
-      <p> Price: {{product.price}}</p>
-      <p> Amount: {{product.amount}}</p>
+      <p> Price: {{product.price | currency}} </p>
 
     </a>
     <button class="btn" (click)="addProductToCart(product)">Add to cart</button>
